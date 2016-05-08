@@ -44,11 +44,71 @@ hr {
 }
 
 
+li {
+	position: relative;
+	overflow: hidden;
+	display: inline-block;
+	width: 33.33%;
+	font-size: 16px;
+	font-size: 1.2rem;
+	border: 1px solid #fff;
+	vertical-align: top;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
 
 
 
+@-webkit-keyframes hvr-pulse {
+  25% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
 
+  75% {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+}
 
+@keyframes hvr-pulse {
+  25% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+
+  75% {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+}
+
+li {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+}
+li:hover, .hvr-pulse:focus, .hvr-pulse:active {
+  -webkit-animation-name: hvr-pulse;
+  animation-name: hvr-pulse;
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: 3s;
+  animation-iteration-count: 3s;
+}
+
+li.placeholder {
+	animation-duration: 0s; 
+}
+	
 
 
 
